@@ -19,7 +19,7 @@ import streamlit as st
 
 # ───────────────────────── OpenRouter helper ──────────────────────────────
 API_KEY = st.secrets.get("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY") or ""
-MODEL   = "mistralai/mistral-7b-instruct"  # free tier
+MODEL   = "deepseek/deepseek-v3-base:free"  # free tier
 
 def llm_to_sql(question, columns, table_name="data"):
     schema = ", ".join(f"{c}" for c in columns)
